@@ -1,0 +1,33 @@
+[user]
+  signingkey = TODO
+  name = Gordon Diggs
+  email = gordon@gordondiggs.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+[core]
+  editor = vim
+	excludesfile = /Users/gordondiggs/.gitignore
+[github]
+  user = GordonDiggs
+  token = TODO
+[alias]
+  st = status -sb
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  purr = pull --rebase
+  standup = log --since 1.week --author GordonDiggs
+  stashall= stash --keep-index --include-untracked
+[push]
+  default = matching
+[commit]
+  gpgsign = true
+[gpg]
+  program = gpg

@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Volumes/radiopi 2/scripts/clock'
+let g:netrw_dirhist_2='/Users/gordon/git_repos/rayons'
+let g:netrw_dirhist_3='/Users/gordon/git_repos/mcclimate'
+let g:netrw_dirhist_4='/Users/gordon/git_repos/rayons'
+let g:netrw_dirhist_5='/Users/gordon/git_repos'
+let g:netrw_dirhist_6='/Users/gordon/git_repos/snacks2u'
+let g:netrw_dirhist_7='/Users/gordon/git_repos/rayons'
+let g:netrw_dirhist_8='/Users/GordonDiggs/cc/worker'
+let g:netrw_dirhist_9='/Users/GordonDiggs/cc/cc-hwc'
