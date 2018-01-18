@@ -100,6 +100,8 @@ autocmd FileType c,cpp,ruby,javascript autocmd BufWritePre <buffer> :call <SID>S
 
 com! FormatJSON %!python -m json.tool
 
+let NERDTreeShowHidden=1
+
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
