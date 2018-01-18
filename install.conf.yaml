@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bash_profile: bash_profile
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.gvimrc: gvimrc
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    
+
+- shell:
+  - [curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > .git-completion.bash]

@@ -13,7 +13,3 @@ alias mvim="/Applications/MacVim.app/Contents/bin/mvim"
 alias github_issue_report="docker run --env-file /Users/GordonDiggs/git_repos/issues_by_assignee/.env -it gordondiggs/issues_by_assignee"
 
 down4me() { curl -s "http://www.downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g' ; }
-
-dotfiles() {
-  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
-}
