@@ -12,7 +12,7 @@
     ~/.vim: vim
     ~/.vimrc: vimrc
 - shell:
-  - command: curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" > .git-completion.bash
+  - command: curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" > ~/.git-completion.bash
     stdin: true
     stdout: true
-    description: Downloading git completion file"
+    description: Downloading git completion file
