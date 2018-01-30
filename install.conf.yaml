@@ -8,6 +8,7 @@
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+    ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.gvimrc: gvimrc
     ~/.ssh: ssh
     ~/.vim: vim

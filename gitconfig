@@ -1,5 +1,4 @@
 [user]
-  signingkey = TODO
   name = Gordon Diggs
   email = gordon@gordondiggs.com
 [color]
@@ -14,7 +13,6 @@
 	excludesfile = /Users/gordondiggs/.gitignore
 [github]
   user = GordonDiggs
-  token = TODO
 [alias]
   st = status -sb
   ci = commit
