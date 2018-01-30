@@ -4,6 +4,7 @@
 - clean: ['~']
 - link:
     ~/.dotfiles: ''
+    ~/.ackrc: ackrc
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
