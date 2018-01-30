@@ -5,6 +5,11 @@ pause() {
   read -p "Press any key to continue... " -n 1 -s
 }
 
+if [ "$(uname)" != "Darwin" ]; then
+  echo "Not Mac - exiting."
+  exit 0
+fi
+
 if ! [ -x "$(command -v brew)" ]; then
   echo "== Installing homebrew"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

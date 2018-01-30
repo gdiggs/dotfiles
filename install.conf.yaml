@@ -8,7 +8,7 @@
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
-    ~/.gnupg/gpg-agent.conf: gpg-agent.conf
+    ~/.gnupg: gnupg
     ~/.gvimrc: gvimrc
     ~/.ssh: ssh
     ~/.vim: vim
@@ -18,3 +18,7 @@
     stdin: true
     stdout: true
     description: Downloading git completion file
+  - command: scripts/mac_install.sh
+    stdin: true
+    stdout: true
+    description: Running MacOS provisioning script
