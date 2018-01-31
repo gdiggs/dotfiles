@@ -30,6 +30,7 @@ brew install \
   jq \
   openssl \
   pinentry-mac \
+  shellcheck \
   sloccount \
   tree \
   watch \
