@@ -52,23 +52,27 @@ brew cask install \
   spotify-notifications \
   soulver
 
-echo "== Generating an SSH key"
-ssh-keygen -t rsa -b 4096 -C "gordon@gordondiggs.com"
-eval "$(ssh-agent -s)"
-ssh-add -K "$HOME/.ssh/id_rsa"
+if ! [ -f "$HOME/.ssh/id_rsa" ]; then
+  echo "== Generating an SSH key"
+  ssh-keygen -t rsa -b 4096 -C "gordon@gordondiggs.com"
+  eval "$(ssh-agent -s)"
+  ssh-add -K "$HOME/.ssh/id_rsa"
 
-cat "$HOME/.ssh/id_rsa.pub" | pbcopy
-echo "Key copied to the clipboard. Add this key to GitHub: https://github.com/settings/keys"
+  cat "$HOME/.ssh/id_rsa.pub" | pbcopy
+  echo "Key copied to the clipboard. Add this key to GitHub: https://github.com/settings/keys"
 
-pause
+  pause
+fi
 
-echo "== Setting up GPG"
-gpg --gen-key
-gpg --armor --export "gordon@gordondiggs.com" | pbcopy
-echo "Key copied to the clipboard. Add this key to Github: https://github.com/settings/keys"
+if [ -z "$(gpg --list-keys | grep pubring)" ]; then
+  echo "== Setting up GPG"
+  gpg --gen-key
+  gpg --armor --export "gordon@gordondiggs.com" | pbcopy
+  echo "Key copied to the clipboard. Add this key to Github: https://github.com/settings/keys"
 
-pause
+  pause
 
-id=$(gpg --list-keys | sed "4q;d" | awk '{$1=$1}1')
-git config --global user.signingKey "$id"
-git config --global commit.gpgsign true
+  id=$(gpg --list-keys | sed "4q;d" | awk '{$1=$1}1')
+  git config --global user.signingKey "$id"
+  git config --global commit.gpgsign true
+fi
