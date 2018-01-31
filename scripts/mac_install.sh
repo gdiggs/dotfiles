@@ -36,7 +36,6 @@ brew install \
 
 echo "== Installing homebrew cask packages"
 brew cask install \
-  --require-sha \
   1password \
   beardedspice \
   bettertouchtool \
