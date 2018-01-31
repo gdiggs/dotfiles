@@ -2,7 +2,8 @@
 set -e
 
 pause() {
-  read -p "Press any key to continue... " -n 1 -s
+  read -p "Press any key to continue..." -r -n 1 -s
+  echo
 }
 
 if [ "$(uname)" != "Darwin" ]; then
@@ -57,13 +58,13 @@ if ! [ -f "$HOME/.ssh/id_rsa" ]; then
   eval "$(ssh-agent -s)"
   ssh-add -K "$HOME/.ssh/id_rsa"
 
-  cat "$HOME/.ssh/id_rsa.pub" | pbcopy
+  pbcopy < "$HOME/.ssh/id_rsa.pub"
   echo "Key copied to the clipboard. Add this key to GitHub: https://github.com/settings/keys"
 
   pause
 fi
 
-if [ -z "$(gpg --list-keys | grep pubring)" ]; then
+if ! (gpg --list-keys | grep -q pubring); then
   echo "== Setting up GPG"
   gpg --gen-key
   gpg --armor --export "gordon@gordondiggs.com" | pbcopy
