@@ -4,6 +4,5 @@ This repo contains dotfiles, and uses dotbot to provision new machines. To use i
 
 ```
 git clone https://github.com/GordonDiggs/dotfiles.git && \
-cd dotfiles && \
-./install
+dotfiles/install
 ```
