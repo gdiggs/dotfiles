@@ -17,41 +17,7 @@ if ! [ -x "$(command -v brew)" ]; then
 fi
 
 echo "== Installing homebrew packages"
-brew install \
-  ack \
-  awscli \
-  coreutils \
-  git \
-  gnupg \
-  gpg-agent \
-  heroku \
-  hub \
-  imagemagick \
-  jq \
-  openssl \
-  pinentry-mac \
-  shellcheck \
-  sloccount \
-  tree \
-  watch \
-  wget
-
-echo "== Installing homebrew cask packages"
-brew cask install \
-  1password \
-  beardedspice \
-  bettertouchtool \
-  captin \
-  dropbox \
-  google-chrome \
-  istat-menus \
-  licecap \
-  macdown \
-  macvim \
-  paw \
-  spotify \
-  spotify-notifications \
-  soulver
+brew bundle
 
 if ! [ -f "$HOME/.ssh/id_rsa" ]; then
   echo "== Generating an SSH key"
