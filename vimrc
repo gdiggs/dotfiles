@@ -1,6 +1,30 @@
-execute pathogen#infect()
-
 set nocompatible                  " Must come first because it changes other options.
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'airblade/vim-rooter'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'fatih/vim-go'
+Plugin 'FuzzyFinder' " from http://vim-scripts.org/vim/scripts.html
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'L9' " from http://vim-scripts.org/vim/scripts.html
+Plugin 'mileszs/ack.vim'
+Plugin 'motemen/git-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-fugitive'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 colorscheme slate
 
