@@ -10,7 +10,7 @@
   pager = true
 [core]
   editor = vim
-	excludesfile = /Users/gordondiggs/.gitignore
+  excludesfile = ~/.gitignore
 [github]
   user = GordonDiggs
 [alias]
