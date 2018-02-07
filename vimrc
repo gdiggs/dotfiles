@@ -22,6 +22,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
