@@ -1,3 +1,5 @@
+tap "caskroom/fonts"
+
 brew "ack"
 brew "awscli"
 brew "coreutils"
@@ -21,6 +23,7 @@ cask "beardedspice"
 cask "bettertouchtool"
 cask "captin"
 cask "dropbox"
+cask "font-source-code-pro"
 cask "google-chrome"
 cask "istat-menus"
 cask "licecap"
