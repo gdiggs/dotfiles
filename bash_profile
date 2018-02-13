@@ -8,7 +8,7 @@ parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(
 
 export EDITOR=mvim
 export GREP_OPTIONS='--color=auto'
-export PS1='\w $(parse_git_branch)🐖  '
+export PS1='\w $(parse_git_branch)🐖 '
 
 alias b="bundle exec"
 alias mvim="/Applications/MacVim.app/Contents/bin/mvim"
