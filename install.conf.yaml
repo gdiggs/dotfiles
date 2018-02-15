@@ -18,6 +18,14 @@
     stdin: true
     stdout: true
     description: Installing vim plugins
+  - command: touch ~/.gitconfig.local
+    stdin: true
+    stdout: true
+    description: Creating local gitconfig
+  - command: touch ~/.bash_profile.local
+    stdin: true
+    stdout: true
+    description: Creating local bash profle
   - command: curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" > ~/.git-completion.bash
     stdin: true
     stdout: true

@@ -25,7 +25,7 @@
   stashall= stash --keep-index --include-untracked
 [push]
   default = matching
-[commit]
-  gpgsign = true
 [gpg]
   program = gpg
+[include]
+	path = ~/.gitconfig.local

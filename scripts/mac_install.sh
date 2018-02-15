@@ -40,6 +40,6 @@ if ! (gpg --list-keys | grep -q pubring); then
   pause
 
   id=$(gpg --list-keys | sed "4q;d" | awk '{$1=$1}1')
-  git config --global user.signingKey "$id"
-  git config --global commit.gpgsign true
+  git config --file "$HOME/.gitconfig.local" user.signingKey "$id"
+  git config --file "$HOME/.gitconfig.local" commit.gpgsign true
 fi
