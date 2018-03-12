@@ -4,6 +4,8 @@ if [ -x "$(command -v rbenv)" ]; then
   eval "$(rbenv init -)"
 fi
 
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'; }
 
 export EDITOR=mvim
