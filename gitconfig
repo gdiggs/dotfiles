@@ -24,7 +24,7 @@
   standup = log --since 1.week --author gdiggs
   stashall= stash --keep-index --include-untracked
 [push]
-  default = matching
+  default = simple
 [gpg]
   program = gpg
 [include]
