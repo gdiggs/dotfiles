@@ -19,9 +19,12 @@ fi
 echo "== Installing homebrew packages"
 brew bundle
 
+printf "Enter email to use for SSH and GPG: "
+read email
+
 if ! [ -f "$HOME/.ssh/id_rsa" ]; then
   echo "== Generating an SSH key"
-  ssh-keygen -t rsa -b 4096 -C "gordon@gordondiggs.com"
+  ssh-keygen -t rsa -b 4096 -C "$email"
   eval "$(ssh-agent -s)"
   ssh-add -K "$HOME/.ssh/id_rsa"
 
@@ -33,8 +36,8 @@ fi
 
 if ! (gpg --list-keys | grep -q pubring); then
   echo "== Setting up GPG"
-  gpg --gen-key
-  gpg --armor --export "gordon@gordondiggs.com" | pbcopy
+  gpg --full-generate-key
+  gpg --armor --export "$email" | pbcopy
   echo "Key copied to the clipboard. Add this key to Github: https://github.com/settings/keys"
 
   pause
