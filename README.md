@@ -6,3 +6,13 @@ This repo contains dotfiles, and uses dotbot to provision new machines. To use i
 git clone https://github.com/gdiggs/dotfiles.git && \
 dotfiles/install
 ```
+
+## Local Files
+
+Git, Bash, and SSH in this repo all support local files for machine-specific configuration. To use them, add a file of the type with the corresponding path:
+
+- Git: `~/.gitconfig.local`
+- Bash: `~/.bash_profile.local`
+- SSH: `~/.ssh/config.local`
+
+All of these files are already gitignored.
