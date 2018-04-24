@@ -8,9 +8,15 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'; }
 
+hostname_if_ssh(){
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    echo "[$(hostname)] "
+  fi
+}
+
 export EDITOR=mvim
 export GREP_OPTIONS='--color=auto'
-export PS1='\w $(parse_git_branch)🐖 '
+export PS1='$(hostname_if_ssh)\w $(parse_git_branch)🐖 '
 
 alias b="bundle exec"
 alias mvim="/Applications/MacVim.app/Contents/bin/mvim"
