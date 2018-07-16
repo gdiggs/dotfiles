@@ -100,7 +100,6 @@ map <Leader>g :Gbrowse<Enter>
 map <Leader>p :CtrlP<Enter>
 
 au BufNewFile,BufRead *.md set filetype=markdown
-au BufNewFile,BufRead *.js set filetype=javascript syntax=jquery
 
 " The following automatically runs gofmt when you save a buffer. Makes it easy
 " to follow formatting rules and always keep your code according to standard.
