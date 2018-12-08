@@ -24,3 +24,5 @@ alias github_issue_report="docker run --env-file /Users/GordonDiggs/git_repos/is
 down4me() { curl -s "http://www.downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g' ; }
 
 source ~/.bash_profile.local
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
