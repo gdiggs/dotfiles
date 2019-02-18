@@ -15,9 +15,9 @@ hostname_if_ssh(){
 }
 
 export EDITOR=mvim
-export GREP_OPTIONS='--color=auto'
 export PS1='$(hostname_if_ssh)\w $(parse_git_branch)🐖 '
 
+alias grep="grep --color=auto"
 alias b="bundle exec"
 alias github_issue_report="docker run --env-file /Users/GordonDiggs/git_repos/issues_by_assignee/.env -it gordondiggs/issues_by_assignee"
 
