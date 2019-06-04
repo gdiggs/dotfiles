@@ -19,6 +19,12 @@ fi
 echo "== Installing homebrew packages"
 brew bundle
 
+echo "== Setting up Bash"
+if ! grep -Fxq "/usr/local/bin/bash" /etc/shells; then
+  echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
+fi
+chsh -s /usr/local/bin/bash
+
 printf "Enter email to use for SSH and GPG: "
 read email
 

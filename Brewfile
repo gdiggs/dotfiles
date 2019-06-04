@@ -2,6 +2,7 @@ tap "caskroom/fonts"
 
 brew "ack"
 brew "awscli"
+brew "bash"
 brew "bash-completion"
 brew "coreutils"
 brew "git"
