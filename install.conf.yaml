@@ -34,3 +34,7 @@
     stdin: true
     stdout: true
     description: Running MacOS provisioning script
+  - command: scripts/linux_install.sh
+    stdin: true
+    stdout: true
+    description: Running Linux provisioning script

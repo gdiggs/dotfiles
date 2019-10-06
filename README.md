@@ -7,6 +7,8 @@ git clone https://github.com/gdiggs/dotfiles.git && \
 dotfiles/install
 ```
 
+If running on Ubuntu, you'll need to `apt install git vim` before running the script
+
 ## Local Files
 
 Git, Bash, and SSH in this repo all support local files for machine-specific configuration. To use them, add a file of the type with the corresponding path:
