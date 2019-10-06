@@ -24,6 +24,7 @@ sudo apt install -y \
   sloccount \
   speedtest-cli \
   software-properties-common \
+  tmux \
   tree \
   watch \
   wget \
