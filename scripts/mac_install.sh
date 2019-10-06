@@ -6,6 +6,10 @@ pause() {
   echo
 }
 
+if "$SKIP_SCRIPTS"; then
+  exit 0
+fi
+
 if [ "$(uname)" != "Darwin" ]; then
   echo "Not Mac - exiting."
   exit 0
