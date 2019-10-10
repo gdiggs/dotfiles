@@ -6,3 +6,5 @@ gnupg
 
 ssh
 !ssh/config
+
+tmux/plugins/
