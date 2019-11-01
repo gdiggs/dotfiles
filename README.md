@@ -7,7 +7,13 @@ git clone https://github.com/gdiggs/dotfiles.git && \
 dotfiles/install
 ```
 
-If running on Ubuntu, you'll need to `apt install git vim` before running the script
+If running on Ubuntu, you'll need to `apt install git vim` before running the script. You'll also want to add the following to `~/.bashrc`:
+
+```
+if [ -f ~/.bash_profile ]; then
+  . ~/.bash_profile
+fi
+```
 
 ## Local Files
 

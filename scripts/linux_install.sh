@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if "$SKIP_SCRIPTS"; then
+if [ ! -z "$SKIP_SCRIPTS" ]; then
   exit 0
 fi
 
@@ -11,7 +11,6 @@ if [ "$(uname)" != "Linux" ]; then
 fi
 
 echo "== Installing packages"
-sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install -y \
   ack \
