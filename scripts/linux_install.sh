@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ ! -z "$SKIP_SCRIPTS" ]; then
+if [ -n "$SKIP_SCRIPTS" ]; then
   exit 0
 fi
 
