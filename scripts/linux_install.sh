@@ -22,7 +22,6 @@ sudo apt install -y \
   jq \
   shellcheck \
   sloccount \
-  speedtest-cli \
   software-properties-common \
   tmux \
   tree \
@@ -45,32 +44,12 @@ sudo apt install -y \
   zlib1g-dev \
   libncurses5-dev \
   libffi-dev \
-  libgdbm5 \
   libgdbm-dev
 
 if ! [ -d "$HOME/.rbenv" ]; then
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
   git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi
-
-echo "== Installing Docker"
-sudo apt install -y \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io
-
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
 
 echo "== Installing Keybase"
 curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
