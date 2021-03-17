@@ -10,7 +10,6 @@
     ~/.gitignore: gitignore
     ~/.gnupg: gnupg
     ~/.gvimrc: gvimrc
-    ~/.ssh: ssh
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.vim: vim
