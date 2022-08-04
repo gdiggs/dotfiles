@@ -14,7 +14,7 @@ hostname_if_ssh(){
   fi
 }
 
-export EDITOR=mvim
+export EDITOR=vim
 export PS1='$(hostname_if_ssh)\w $(parse_git_branch)🐖 '
 
 alias grep="grep --color=auto"
