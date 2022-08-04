@@ -29,16 +29,28 @@ if ! grep -Fxq "/usr/local/bin/bash" /etc/shells; then
 fi
 chsh -s /usr/local/bin/bash
 
+echo "== Setting initial ssh config"
+SSH_ALGO=ed25519
+mkdir -p "$HOME/.ssh"
+tee -a "$HOME/.ssh/config" > /dev/null <<EOF
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/$SSH_ALGO
+
+Include ~/.ssh/config.local
+EOF
+
 printf "Enter email to use for SSH and GPG: "
 read email
 
-if ! [ -f "$HOME/.ssh/id_rsa" ]; then
+if ! [ -f "$HOME/.ssh/$SSH_ALGO" ]; then
   echo "== Generating an SSH key"
-  ssh-keygen -t rsa -b 4096 -C "$email"
+  ssh-keygen -t "$SSH_ALGO" -C "$email"
   eval "$(ssh-agent -s)"
-  ssh-add -K "$HOME/.ssh/id_rsa"
+  ssh-add -K "$HOME/.ssh/id_$SSH_ALGO"
 
-  pbcopy < "$HOME/.ssh/id_rsa.pub"
+  pbcopy < "$HOME/.ssh/id_$SSH_ALGO.pub"
   echo "Key copied to the clipboard. Add this key to GitHub: https://github.com/settings/keys"
 
   pause
