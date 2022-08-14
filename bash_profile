@@ -1,9 +1,9 @@
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 
 source ~/.git-completion.bash
 
 if [ -x "$(command -v rbenv)" ]; then
-  eval "$(rbenv init -)"
+  eval "$(rbenv init - bash)"
 fi
 
 parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'; }

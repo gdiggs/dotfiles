@@ -24,10 +24,10 @@ echo "== Installing homebrew packages"
 brew bundle
 
 echo "== Setting up Bash"
-if ! grep -Fxq "/usr/local/bin/bash" /etc/shells; then
-  echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
+if ! grep -Fxq "/opt/homebrew/bin/bash" /etc/shells; then
+  echo "/opt/homebrew/bin/bash" | sudo tee -a /etc/shells
 fi
-chsh -s /usr/local/bin/bash
+chsh -s /opt/homebrew/bin/bash
 
 echo "== Setting initial ssh config"
 SSH_ALGO=ed25519
@@ -44,7 +44,7 @@ EOF
 printf "Enter email to use for SSH and GPG: "
 read email
 
-if ! [ -f "$HOME/.ssh/$SSH_ALGO" ]; then
+if ! [ -f "$HOME/.ssh/id_$SSH_ALGO" ]; then
   echo "== Generating an SSH key"
   ssh-keygen -t "$SSH_ALGO" -C "$email"
   eval "$(ssh-agent -s)"
