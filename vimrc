@@ -12,6 +12,7 @@ Plugin 'airblade/vim-rooter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'FuzzyFinder' " from http://vim-scripts.org/vim/scripts.html
+Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'L9' " from http://vim-scripts.org/vim/scripts.html
 Plugin 'mileszs/ack.vim'
