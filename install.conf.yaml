@@ -8,7 +8,6 @@
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
-    ~/.gnupg: gnupg
     ~/.gvimrc: gvimrc
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
